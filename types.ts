@@ -22,4 +22,7 @@ export interface PostTypes {
   createdAt: string;
   authorId: number;
   author: UserType;
+  likes: {
+    isLiked: boolean; 
+  }[];
 }
