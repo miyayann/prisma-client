@@ -13,8 +13,8 @@ interface Props {
 
 const Post = (props: Props) => {
   const { post, onDelete, onUpdate } = props;
-  const Liked = (post.likes.map((like) => like.isLiked));
-  const initialIsLiked = Liked.some((liked: boolean) => liked === true);
+  const Liked = (post.likes?.map((like) => like.isLiked));
+  const initialIsLiked = Liked?.some((liked: boolean) => liked === true);
   const {user} = useAuth()
   const [editing, setEditing] = useState(false)
   const [updateContent, setUpdateContent] = useState("")
